@@ -1,0 +1,492 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300' rel='stylesheet' type='text/css'>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Zeal '15</title>
+        
+        <script src="jquery-2.1.3.min.js"></script>
+        <script>
+        
+        
+$(document).ready(function(){
+	$('.box img').on('click', function() {
+    	$(this).toggleClass('clicked');
+	});
+
+	$('.show').on('click', function() {
+    	$('.redscreenwrap').addClass('slidescreen');
+    	$('.bandall').addClass('slidescreen');
+    	$('.crowd').addClass('slideband');
+    	$('.title').addClass('slideband');
+	});
+     
+});
+
+function init() {
+document.getElementById('redscreenwrap').style.visibility = "visible";
+}
+setTimeout(init,600);   
+        </script>
+        
+<style>
+        
+        
+        	div{
+        		margin: 0;
+        		padding: 0;
+        	}
+        	html {
+				background: url('images/eventTypes/octaves/octavesBack.jpg');
+				background-repeat:no-repeat;
+				background-position: center top;
+				background-attachment:fixed;
+			}
+			body {
+				color:white;
+				font-family: Arial;
+				font-size: 100%;
+				width: 100%;
+				background: rgb(0,0,0,0);
+				margin: 0;
+			}
+        
+        	.container{
+        		position: relative;
+        		height: 768px;
+        		overflow-x: hidden;
+        	}
+        		
+        	.crowd{	
+        		position: absolute;
+        		bottom: 0px;
+        		margin: 0;
+        		
+        		-webkit-transition-duration: 1.5s;
+    -moz-transition-duration: 1.5s;
+    -o-transition-duration: 1.5s;
+    transition-duration: 1.5s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+        	}
+        	
+        	.bandall{
+        		position: absolute;
+        		margin: 0;
+        		
+        		-moz-animation-name: lift;
+   				-moz-animation-iteration-count: 1;
+				-moz-animation-timing-function: ease-in-out;
+    			-moz-animation-duration: 0.4s;
+
+    			-webkit-animation-name: lift;
+    			-webkit-animation-iteration-count: 1;
+				-webkit-animation-timing-function: ease-out;
+    			-webkit-animation-duration: 0.4s;
+
+    			animation-name: lift;
+   				animation-iteration-count: 1;
+    			animation-timing-function: ease-in-out;
+   				animation-duration: 0.4s;
+   				
+   				-webkit-transition-duration: 1.5s;
+    -moz-transition-duration: 1.5s;
+    -o-transition-duration: 1.5s;
+    transition-duration: 1.5s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+   				
+        	}
+        	
+        	.title{
+        		position: absolute;
+        		top: 0px;
+        		left: 300px;
+        		z-index:5;
+        		-moz-animation-name: dropHeader;
+   				-moz-animation-iteration-count: 1;
+				-moz-animation-timing-function: ease-in-out;
+    			-moz-animation-duration: 0.4s;
+
+    			-webkit-animation-name: dropHeader;
+    			-webkit-animation-iteration-count: 1;
+				-webkit-animation-timing-function: ease-out;
+    			-webkit-animation-duration: 0.4s;
+
+    			animation-name: dropHeader;
+   				animation-iteration-count: 1;
+    			animation-timing-function: ease-in-out;
+   				animation-duration: 0.4s;
+   				
+   				-webkit-transition-duration: 1.5s;
+    -moz-transition-duration: 1.5s;
+    -o-transition-duration: 1.5s;
+    transition-duration: 1.5s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+        	}
+        	
+        	
+        	.makevisible{
+        		position: absolute;
+        		right: -700px;
+        		top: 200px;
+        		display: inline-block;
+        	}
+        	
+        	.redscreenwrap{
+        		width: 600px;
+        		height: 768px;
+        		position: absolute;
+        		top: 70px;
+        		overflow-x: hidden;	
+        		overflow: hidden;
+        		z-index: 2;
+        		visibility:hidden;
+        		
+        		-webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+        		
+        		-moz-animation-name: dropScreen;
+   				-moz-animation-iteration-count: 1;
+				-moz-animation-timing-function: ease-in-out;
+				-moz-animation-delay: 0.4s;
+    			-moz-animation-duration: 0.6s;
+
+    			-webkit-animation-name: dropScreen;
+    			-webkit-animation-iteration-count: 1;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-delay: 0.4s;
+    			-webkit-animation-duration: 0.6s;
+
+    			animation-name: dropScreen;
+   				animation-iteration-count: 1;
+    			animation-timing-function: ease-in-out;
+    			animation-delay: 0.4s;
+   				animation-duration: 0.6s;
+        	}
+        	.redscreen{
+        		width: 1000px;
+        		height: 1700px;
+        		background: rgba(255,0,0,0.3);
+        		overflow-x: hidden;	
+        		position:inherit;
+        		top:-300px;
+        		left:-750px;
+        		z-index: 2;
+        		-ms-transform: rotate(21deg); /* IE 9 */
+    			-webkit-transform: rotate(21deg); /* Chrome, Safari, Opera */
+    			transform: rotate(21deg);
+        	}
+        	
+        	@font-face {
+    			font-family: RobotoCondensed;
+    			src: url(RobotoCondensed-Light.ttf);
+			}
+        	
+        	.redscrntxt{
+        		font-family: RobotoCondensed, sans-serif;
+        		font-size:1.3em;
+        		
+        		color: white;
+        		width: 300px;
+        		height: 250px;
+        		position:absolute;
+        		left: 30px;
+        		top: 150px;
+        		z-index: 3;
+        	}
+        	
+        	.header{
+        		
+        		height: 70px;
+        		margin: 0;
+        		background: black;
+        		position: relative;
+        		z-index: 4;
+        		
+        	}
+        	.footer{
+        		
+        		height: 100px;
+        		margin: 0;
+        		background: black;
+        		
+        	}
+        	
+        	.fixedtwo{
+        		background: yellow;
+        		width: 10px;
+        		height: 100px;
+        		position:fixed;
+        		right: 0px;
+        		bottom: 0px;
+        	
+        	-moz-animation-name: dropHeader;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: ease-in;
+    -moz-animation-duration: 0.3s;
+
+    -webkit-animation-name: dropHeader;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-duration: 0.3s;
+
+    animation-name: dropHeader;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.3s;
+}
+
+.slidescreen{
+    -webkit-transform:translate(-700px,0px);
+    -moz-transform:translate(-700px,0px);
+}
+.slideband{
+    -webkit-transform:translate(-400px,0px);
+    -moz-transform:translate(-400px,0px);
+}
+.slidetitle{
+    -webkit-transform:translate(-270px,0px);
+    -moz-transform:translate(-270px,0px);
+}
+        	
+        	
+@-moz-keyframes lift {
+    0% {
+        -moz-transform: translateY(40px);
+        -moz-opacity: 0;
+    }
+    100% {
+        -moz-transform: translateY(0);
+        -moz-opacity: 1;
+    }
+}
+@-webkit-keyframes lift {
+    0% {
+        -webkit-transform: translateY(40px);
+        -webkit-opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        -webkit-opacity: 1;
+    }
+}
+@keyframes lift {
+    0% {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+@-moz-keyframes dropHeader {
+    0% {
+        -moz-transform: translateY(-40px);
+        -moz-opacity: 0;
+    }
+    100% {
+        -moz-transform: translateY(0);
+        -moz-opacity: 1;
+    }
+}
+@-webkit-keyframes dropHeader {
+    0% {
+        -webkit-transform: translateY(-40px);
+        -webkit-opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        -webkit-opacity: 1;
+    }
+}
+@keyframes dropHeader {
+    0% {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+        	
+@-moz-keyframes dropScreen {
+    0% {
+        -moz-transform: translateY(-768px);
+    }
+    100% {
+        -moz-transform: translateY(0);
+    }
+}
+@-webkit-keyframes dropScreen {
+    0% {
+    	
+        -webkit-transform: translateY(-768px);
+        -webkit-opacity: 0;
+    }
+    100% {
+    	
+        -webkit-transform: translateY(0);
+        -webkit-opacity: 1;
+    }
+}
+@keyframes dropScreen {
+    0% {
+        transform: translateY(-768px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.box img {
+    -webkit-transition:1s;
+}
+.box img.clicked{
+    margin-left:50px;
+ }
+ 
+ header{
+        		background: teal;
+        		
+        	}
+        	
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+header ul li{
+    display: inline-block;
+    margin-right: 20px
+} 
+
+.btn {
+	border: none;
+	font-family: inherit;
+	font-size: 1em;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 5px 20px;
+	display: inline-block;
+	margin: 3px 5px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+/* Pseudo elements for icons */
+.btn:before,
+.icon-heart:after,
+.icon-star:after,
+.icon-plus:after,
+.icon-file:before {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	position: relative;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Button 1 */
+.btn-1 {
+	border: 3px solid #fff;
+	color: #fff;
+}
+
+/* Button 1a */
+.btn-1a:hover,
+.btn-1a:active {
+	color: #0e83cd;
+	background: #fff;
+}
+        	
+	</style>
+        
+</head>
+
+
+
+<body>
+    
+        <div class="header">one</div>
+        
+        
+        <div class="container">
+        
+        <div class="bandall" >
+        	<img class="band" src="images/eventTypes/octaves/bandall.png">
+        	<!--<iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/v9eC6neFmXk" frameborder="0" allowfullscreen></iframe>-->
+        </div>
+        
+        <div class="crowd">
+        	<img class="crowdimg" src="images/eventTypes/octaves/crowd.png">
+        </div>
+        
+        <img class="title" src="images/eventTypes/octaves/titleOct.png">
+        
+        </div>
+        
+        
+        <div class="redscreenwrap" id="redscreenwrap">
+        	<div class="redscreen">one</div>
+        	<div class="redscrntxt">Octaves marked the beginning of a new era in the
+campus rock scene, inspiring participation from a
+myriad of amateur and professional rock bands.
+First of its kind event in the northern suburbs
+of  Mumbai,   Octaves   has   become  highly
+popular with the crowd and a permanent
+highlight of ZEAL.<br><br><button class="show btn btn-1 btn-1a">What's it like -></button></div>
+        </div>
+        
+        
+        
+        
+        <div class="footer">one</div>
+        
+        <div class="fixedtwo">two</div>
+        <!--<div class="box">
+    <img src="https://www.google.com/images/srpr/logo11w.png" width="100" />
+</div>-->
+    </body>
+</html>
