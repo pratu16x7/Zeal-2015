@@ -1,0 +1,93 @@
+.container{
+    position: relative;
+    margin: 0px 0px 0px 50px;
+    height: 768px;
+    overflow-x: hidden;
+}
+
+#icons{
+	position: absolute;
+	margin:520px auto 0px 650px;
+}
+
+#vocals{
+	position: absolute;
+	margin:0px;
+}
+#dance{
+	position: absolute;
+	margin:0px;
+}
+#act{
+	position: absolute;
+	margin:0px;
+}
+
+
+.jimgMenu {
+	position:absolute;
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+	width:1200px;
+	height:700px;
+	overflow: hidden;
+}
+
+.jimgMenu ul {
+	background: url(images/stagerays.jpg);
+	background-repeat:no-repeat;
+	background-position: center top;
+				background-attachment:100% 100%;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	height: 700px;
+	position: relative;
+	}
+	
+.jimgMenu ul li {
+	width: 400px;
+	float: left;
+	display: block;
+	overflow: hidden;
+}
+
+.jimgMenu ul li div {
+	text-indent: 50px;
+	background:#fff repeat scroll 0%;
+	border-right: 2px solid #fff;
+	cursor:pointer;
+	display:block;
+	overflow: hidden;
+	height: 700px;
+}
+
+.jimgMenu ul li.vocals div {
+	background: url(images/landscapes.png) ;
+  
+}
+
+.jimgMenu ul li.dance  div{
+	background: url(images/people.png) ;
+
+}
+
+.jimgMenu ul li.act  div{
+	background: url(images/nature.png);
+  
+}
+
+.jimgMenu ul li#abstract a {
+	background: url(images/abstract.jpg) repeat scroll 0%;
+
+}
+
+.jimgMenu ul li#urban a {
+	background: url(images/urban.jpg) repeat scroll 0%;
+	border-right-style: none;
+}
+
+.clear {
+	clear: both;
+}
