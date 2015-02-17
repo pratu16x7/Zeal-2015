@@ -1,2 +1,2 @@
 # Zeal15
-First attempt at a full-fledged graphical website
+First attempt to create a full-fledged graphical website
