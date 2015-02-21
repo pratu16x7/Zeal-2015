@@ -53,7 +53,7 @@
 	overflow: hidden;
 }
 
-.jimgMenu ul li div {
+.jimgMenu ul li div.sect {
 	text-indent: 50px;
 	background:#fff repeat scroll 0%;
 	border-right: 2px solid #fff;
@@ -63,17 +63,17 @@
 	height: 700px;
 }
 
-.jimgMenu ul li.vocals div {
+.jimgMenu ul li.vocals div.sect {
 	background: url(images/landscapes.png) ;
   
 }
 
-.jimgMenu ul li.dance  div{
+.jimgMenu ul li.dance  div.sect{
 	background: url(images/people.png) ;
 
 }
 
-.jimgMenu ul li.act  div{
+.jimgMenu ul li.act  div.sect{
 	background: url(images/nature.png);
   
 }
@@ -90,4 +90,12 @@
 
 .clear {
 	clear: both;
+}
+
+.sectcontainer{
+	position: absolute;
+	width: 940px;
+	height: 600px;
+	margin: 50px;
+	border: 2px ridge white;
 }

@@ -118,7 +118,8 @@ $().ready(function() {
 						var $this = $(this);
 						
 						$('#icons div').hide();							
-						$('#'+name).show();								//this doesn't seem to work
+						$('#'+name.split(" ")[0]).show();								//works now :D, name was "dance active"
+						
 						$this.animate({marginLeft:500}, 600); 
 					})		 
 				});
@@ -135,9 +136,9 @@ $().ready(function() {
 <div class="jimgMenu">
 
   <ul id="nav">
-    <li class="vocals"><div>Vocals</div></li>
-    <li class="dance"><div>Dance<button class="btn btn-1 btn-1a">Group Dance</button><button class="btn btn-1 btn-1a">Group Dance</button><button class="btn btn-1 btn-1a">Group Dance</button><button class="btn btn-1 btn-1a">Group Dance</button></div></li>
-    <li class="act"><div>Act</div></li>
+    <li class="vocals"><div class="sect"><div class="sectcontainer">Vocals </div></div></li>
+    <li class="dance"><div class="sect"><div class="sectcontainer">Dance<button class="btn btn-1 btn-1a">Group Dance</button><button class="btn btn-1 btn-1a">Group Dance</button><button class="btn btn-1 btn-1a">Group Dance</button><button class="btn btn-1 btn-1a">Group Dance</button></div></div></li>
+    <li class="act"><div class="sect"><div class="sectcontainer">Act</div></div></li>
     
   </ul>
 </div>
