@@ -5,20 +5,22 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Events - Zeal'15 - VCET</title>
         
-        <script src="jquery-2.1.3.min.js"></script>
-
+		<script src="jquery-2.1.3.min.js"></script>
+        
         
         <style>
-        
-        	header, footer{
-				display:block;
+        	
+        	
+        	html, body, div, p {
+				margin: 0;
+				padding: 0;
 			}
-
-        	html {
-				background: url('images/eventTypes/octaves/octavesBack.jpg');
+        	header, footer {display:block;}
+			html {
 				background-repeat:no-repeat;
 				background-position: center top;
-				background-attachment:scroll;
+				background-attachment:fixed;
+				background-color: black;
 			}
 			body {
 				color:white;
@@ -26,8 +28,125 @@
 				font-size: 100%;
 				width: 100%;
 				background: rgb(0,0,0,0);
-				margin: 0;
+				margin: 0 auto;
 			}
+			.footer{
+				background: #15191b;
+				height: 60px;
+				padding: 10px 0;
+				color: gray;
+				text-align: center;
+			}
+
+			.wrapperBG{
+				width: 100%;
+				height: 850px;
+				background: url(images/pagelayout/OnlyBG.jpg);
+				background-repeat:no-repeat;
+				background-position: center bottom;
+				background-color: black;
+			}
+			@media screen and (min-height: 910px) {
+    		.wrapperBG {
+        		height: 930px;
+   				}
+   			}
+			.wrapper{
+				position: relative;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+			.header{
+				background-color: rgba(0,0,0,0.8);
+				border: 1px solid black;
+				width: 100%;
+				height: 150px;
+			}
+			.testslider{
+				background-color: rgba(0,0,0,0.5);
+				border: 1px solid black;
+				width: 1083px;
+				height: 608px;
+				float: right;
+				margin-top:10px;
+				margin-bottom:10px;
+				margin-right:70px;
+			}
+			#icons{
+				position: absolute;
+				margin:520px auto 0px 650px;
+			}
+
+			#vocals{
+				position: absolute;
+				margin:0px;
+			}
+			#dance{
+				position: absolute;
+				margin:0px;
+			}
+			#act{
+				position: absolute;
+				margin:0px;
+			}
+			
+			.screenwrap{
+				background-color: rgba(0,0,0,0.5);
+				border: 1px solid black;
+        		margin: 0;
+        		width: 400px;
+        		height: 1100px;
+        		position: absolute;
+        		top: 0px;
+        		overflow-x: hidden;	
+        		overflow: hidden;
+        		z-index: 2;
+        		/* visibility:hidden;*/
+        		
+        		-webkit-transition-duration: 1s;
+  				-moz-transition-duration: 1s;
+    			-o-transition-duration: 1s;
+				transition-duration: 1s;
+    			-webkit-transition-property: -webkit-transform;
+    			-moz-transition-property: -moz-transform;
+    			-o-transition-property: -o-transform;
+    			transition-property: transform;
+        		
+        		-moz-animation-name: dropScreen;
+   				-moz-animation-iteration-count: 1;
+				-moz-animation-timing-function: ease-in-out;
+				-moz-animation-delay: 0.4s;
+    			-moz-animation-duration: 0.6s;
+
+    			-webkit-animation-name: dropScreen;
+    			-webkit-animation-iteration-count: 1;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-delay: 0.4s;
+    			-webkit-animation-duration: 0.6s;
+
+    			animation-name: dropScreen;
+   				animation-iteration-count: 1;
+    			animation-timing-function: ease-in-out;
+    			animation-delay: 0.4s;
+   				animation-duration: 0.6s;
+        	}
+        	.screen{
+        		margin: 0;
+        		width: 1000px;
+        		height: 1700px;
+        		background: rgba(255,0,0,0.3);
+        		overflow-x: hidden;	
+        		position:inherit;
+        		top:-300px;
+        		left:-750px;
+        		z-index: 2;
+        		-ms-transform: rotate(12deg); /* IE 9 */
+    			-webkit-transform: rotate(12deg); /* Chrome, Safari, Opera */
+    			transform: rotate(12deg);
+        	}
+        	
+        	
         </style>
 
         
@@ -36,5 +155,19 @@
 
 
 	<body>
+	
+	
+	<div class="wrapperBG">
+		<div class="wrapper">
+			<div class="header"></div>
+			<div class="testslider"></div>
+			<div class="screenwrap">
+				<div class="screen"></div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="footer"><p><!--&copy Copyright Student's Council (Prateeksha Singh), 2015. All rights reserved.--></p></div>
     </body>
 </html>
