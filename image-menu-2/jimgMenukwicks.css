@@ -64,17 +64,17 @@
 }
 
 .jimgMenu ul li.vocals div.sect {
-	background: url(images/landscapes.png) ;
+	background: rgba(255,0,0,0.3);
   
 }
 
 .jimgMenu ul li.dance  div.sect{
-	background: url(images/people.png) ;
+	background: rgba(0,255,0,0.25) ;
 
 }
 
 .jimgMenu ul li.act  div.sect{
-	background: url(images/nature.png);
+	background: rgba(0,0,255,0.3);
   
 }
 
