@@ -20,7 +20,9 @@ $(document).ready(function(){
     	$('.bandall').addClass('slidescreen');
     	$('.crowd').addClass('slideband');
     	$('.title').addClass('slideband');
+    	$(".title").animate({ opacity: 0 }, 1500);
     	$('.gallcont').addClass('slideband');
+    	$(".gallcont").delay(1000).animate({ opacity: 1 }, 1500);
 	});
 	
 	$('.footer').on('click', function() {
@@ -28,7 +30,9 @@ $(document).ready(function(){
     	$('.bandall').removeClass('slidescreen');
     	$('.crowd').removeClass('slideband');
     	$('.title').removeClass('slideband');
+    	$(".title").delay(1000).animate({ opacity: 1 }, 1500);
     	$('.gallcont').removeClass('slideband');
+    	$('.gallcont').animate({ opacity: 0 }, 1500);
 	});
      
 });
@@ -280,7 +284,6 @@ setTimeout(init,600);
     -moz-transform:translate(-700px,0px);
 }
 .slideband{
-	opacity: 0.5;
     
     -webkit-transform:translate(-400px,0px);
     -moz-transform:translate(-400px,0px);
@@ -472,26 +475,13 @@ header ul li{
     
 .gallcont{
 				position: absolute;
-        		top: 120px;
-        		
+        		top: 0px;
+        		opacity: 0;
         		right: -200px;
         		
         		z-index:5;
         		overflow-x: hidden;
-        		-moz-animation-name: dropHeader;
-   				-moz-animation-iteration-count: 1;
-				-moz-animation-timing-function: ease-in-out;
-    			-moz-animation-duration: 0.4s;
-
-    			-webkit-animation-name: dropHeader;
-    			-webkit-animation-iteration-count: 1;
-				-webkit-animation-timing-function: ease-out;
-    			-webkit-animation-duration: 0.4s;
-
-    			animation-name: dropHeader;
-   				animation-iteration-count: 1;
-    			animation-timing-function: ease-in-out;
-   				animation-duration: 0.4s;
+        		
    				
    				-webkit-transition-duration: 1.5s;
     -moz-transition-duration: 1.5s;
@@ -518,6 +508,10 @@ header ul li{
 .bordertest{
 		box-shadow: 10px 10px 10px -10px rgba(0, 0, 0, 0.9);
 		opacity: 1;
+}
+
+.hide{
+	visibility: hidden;
 }
 	
 	</style>
@@ -558,10 +552,15 @@ header ul li{
 					<a href="images/eventTypes/octaves/imgs/001.jpg" target="_self" class="inline-block litebox" data-litebox-group="group-1" data-litebox-text="This is a caption"><img src="images/eventTypes/octaves/imgs/001thumb.jpg" class="inline-block" /></a>
 					<a href="images/eventTypes/octaves/imgs/002.jpg" target="_self" class="inline-block litebox" data-litebox-group="group-1" data-litebox-text="The next image won't have a caption"><img src="images/eventTypes/octaves/imgs/002thumb.jpg" class="inline-block" /></a>
 					<a href="images/eventTypes/octaves/imgs/003.jpg" target="_self" class="inline-block litebox" data-litebox-group="group-1"><img src="images/eventTypes/octaves/imgs/003thumb.jpg" class="inline-block" /></a>
-					<a href="images/eventTypes/octaves/imgs/004.jpg" target="_self" class="inline-block litebox" data-litebox-group="group-1" data-litebox-text="Another caption..."><img src="images/eventTypes/octaves/imgs/004thumb.jpg" class="inline-block" /></a>
 					
 					<br>
 					<a href="images/eventTypes/octaves/imgs/001.jpg" target="_self" class="inline-block litebox" data-litebox-group="group-1" data-litebox-text="This is a caption"><img src="images/eventTypes/octaves/imgs/001thumb.jpg" class="inline-block" /></a>
+					<a href="images/eventTypes/octaves/imgs/002.jpg" target="_self" class="inline-block litebox" data-litebox-group="group-1" data-litebox-text="The next image won't have a caption"><img src="images/eventTypes/octaves/imgs/002thumb.jpg" class="inline-block" /></a>
+					<a href="images/eventTypes/octaves/imgs/003.jpg" target="_self" class="inline-block litebox" data-litebox-group="group-1"><img src="images/eventTypes/octaves/imgs/003thumb.jpg" class="inline-block" /></a>
+					<a href="images/eventTypes/octaves/imgs/004.jpg" target="_self" class="inline-block litebox" data-litebox-group="group-1" data-litebox-text="Another caption..."><img src="images/eventTypes/octaves/imgs/004thumb.jpg" class="inline-block" /></a>
+					
+					<br>
+					<a href="images/eventTypes/octaves/imgs/001.jpg" target="_self" class="inline-block litebox hide" data-litebox-group="group-1" data-litebox-text="This is a caption"><img src="images/eventTypes/octaves/imgs/001thumb.jpg" class="inline-block" /></a>
 					<a href="images/eventTypes/octaves/imgs/002.jpg" target="_self" class="inline-block litebox" data-litebox-group="group-1" data-litebox-text="The next image won't have a caption"><img src="images/eventTypes/octaves/imgs/002thumb.jpg" class="inline-block" /></a>
 					<a href="images/eventTypes/octaves/imgs/003.jpg" target="_self" class="inline-block litebox" data-litebox-group="group-1"><img src="images/eventTypes/octaves/imgs/003thumb.jpg" class="inline-block" /></a>
 					<a href="images/eventTypes/octaves/imgs/004.jpg" target="_self" class="inline-block litebox" data-litebox-group="group-1" data-litebox-text="Another caption..."><img src="images/eventTypes/octaves/imgs/004thumb.jpg" class="inline-block" /></a>
