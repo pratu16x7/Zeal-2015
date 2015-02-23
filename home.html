@@ -45,7 +45,7 @@ $(document).ready(function(){
 					ListLi: 'fssLi', // default class for li's in the image / content controll 
 					ListLiActive: 'fssActive', // default class for active state in the controll list
 					addListToId: false, // add the controll list to special id in your code - default false
-					allowKeyboardCtrl: true, // allow keyboard controlls left / right / space
+					allowKeyboardCtrl: false, // allow keyboard controlls left / right / space
 					autoplay: true // autoplay the slideshow
         
     });
@@ -284,6 +284,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03000000', e
 				
 			}
 			
+			.logo {
+width: 300px;
+height: 100px;
+background: url('http://placehold.it/300x100/ffffff/000000.png&text=first') no-repeat center top;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+}
+.logo:hover {
+background-image: url('http://placehold.it/300x100/ffffff/000000.png&text=second');
+}
+			
         	
         </style>
 
@@ -312,15 +323,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03000000', e
 						<div class="leftblock">
 							<img class="leftboximg" src="images/home/ZealYouthopia.png"></img>
 							<div id="slideshowWrapper" >
-    <ul id="slideshow">
-        <li><img src="images/4.jpg" width="752" height="508" border="0" alt="" /></li> <!-- This is the last image in the slideshow -->
-        <li><img src="images/3.jpg" width="752" height="508" border="0" alt="" /></li>
-        <li><img src="images/2.jpg" width="752" height="508" border="0" alt="" /></li>
-        <li><img src="images/1.jpg" width="752" height="508" border="0" alt="" /></li> <!-- This is the first image in the slideshow -->
-    </ul><br clear="all" />
-</div>
+    							<ul id="slideshow">
+       								<li><img src="images/4.jpg" width="752" height="508" border="0" alt="" /></li> <!-- This is the last image in the slideshow -->
+        							<li><img src="images/3.jpg" width="752" height="508" border="0" alt="" /></li>
+       								<li><img src="images/2.jpg" width="752" height="508" border="0" alt="" /></li>
+    								<li><img src="images/1.jpg" width="752" height="508" border="0" alt="" /></li> <!-- This is the first image in the slideshow -->
+    							</ul><br clear="all" />
+							</div>
 						</div>
-						<div class="rightblock"></div>
+						<div class="rightblock"><div class="logo"></div></div>
 				</div>
 			
 			</div>

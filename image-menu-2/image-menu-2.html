@@ -110,10 +110,12 @@ $().ready(function() {
 <script type="text/javascript">
 $().ready(function() {
 	$('.jimgMenu ul').kwicks({max: 1050, duration: 500, easing: 'easeOut'});
-	
+	var name;
 	$('#nav > li').click(function(){
-					var $this = $(this);
-					var name = this.className;
+					
+					if(name != this.className){
+						var $this = $(this);
+						name = this.className;
 					$('#icons').animate({marginLeft:100}, 600,function(){
 						var $this = $(this);
 						
@@ -121,7 +123,9 @@ $().ready(function() {
 						$('#'+name.split(" ")[0]).show();								//works now :D, name was "dance active"
 						
 						$this.animate({marginLeft:500}, 600); 
-					})		 
+					})	
+					
+					}	 
 				});
 	
 	});
@@ -144,8 +148,8 @@ $().ready(function() {
 </div>
 
 <div id="icons">
-<div id="vocals">
-<img src="images/block1.jpg"></img>
+<div id="vocals" style="display:none;">
+<img src="images/block1.png"></img>
 </div>
 
 <div id="dance" style="display:none;">
