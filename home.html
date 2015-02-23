@@ -3,10 +3,55 @@
     <head>
     	
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Events - Zeal'15 - VCET</title>
+        <title>Zeal'15 - VCET</title>
         
 		<script src="jquery-2.1.3.min.js"></script>
+        <script>
         
+        
+$(document).ready(function(){
+	$('.litebox').liteBox();
+	$('.box img').on('click', function() {
+    	$(this).toggleClass('clicked');
+	});
+
+	$('.show').on('click', function() {
+    	$('.redscreenwrap').addClass('slidescreen');
+    	$('.bandall').addClass('slidescreen');
+    	$('.crowd').addClass('slideband');
+    	$('.title').addClass('slideband');
+    	$(".title").animate({ opacity: 0 }, 1500);
+    	$('.gallcont').addClass('slideband');
+    	$(".gallcont").delay(1000).animate({ opacity: 1 }, 1500);
+	});
+	
+	$('.footer').on('click', function() {
+    	$('.redscreenwrap').removeClass('slidescreen');
+    	$('.bandall').removeClass('slidescreen');
+    	$('.crowd').removeClass('slideband');
+    	$('.title').removeClass('slideband');
+    	$(".title").delay(1000).animate({ opacity: 1 }, 1500);
+    	$('.gallcont').removeClass('slideband');
+    	$('.gallcont').animate({ opacity: 0 }, 1500);
+	});
+     
+});
+
+function init() {
+document.getElementById('redscreenwrap').style.visibility = "visible";
+}
+setTimeout(init,600);   
+        </script>
+       
+		<script src="assets/js/litebox.min.js" type="text/javascript"></script>
+<script src="assets/js/images-loaded.min.js" type="text/javascript"></script>
+
+	<!-- HTML5 SHIV -->
+		<!--[if lt IE 9]>
+			<script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="http://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+        <link href="assets/css/litebox.css" rel="stylesheet" type="text/css" media="all" />
         
         <style>
         	
@@ -41,7 +86,7 @@
 			.wrapperBG{
 				width: 100%;
 				height: 850px;
-				background: url(images/pagelayout/OnlyBG.jpg);
+				background: url(images/pagelayout/OnlyBGHome.jpg);
 				background-repeat:no-repeat;
 				background-position: center bottom;
 				background-color: black;
@@ -58,94 +103,140 @@
 				overflow: hidden;
 			}
 			.header{
+				position: relative;
 				background-color: rgba(0,0,0,0.8);
 				border: 1px solid black;
 				width: 100%;
-				height: 150px;
+				height: 90px;
 			}
-			.testslider{
-				background-color: rgba(0,0,0,0.5);
-				border: 1px solid black;
-				width: 1083px;
-				height: 608px;
-				float: right;
-				margin-top:10px;
-				margin-bottom:10px;
-				margin-right:70px;
-			}
-			#icons{
+			#headerbox{
+				/*background: green;*/
 				position: absolute;
-				margin:520px auto 0px 650px;
+				top: 0px;
+				width: 950px;
+				height: inherit;
+				margin-left: auto;
+				margin-right: auto;
+				left: 40px;
+				right: 0;
 			}
-
-			#vocals{
+			.videobox1, .videobox2{
 				position: absolute;
-				margin:0px;
+				top: 0px;
+				left: 0px;
+				width: 475px;
+				height: inherit;
+				/*background:red;
+				display:inline;*/
 			}
-			#dance{
-				position: absolute;
-				margin:0px;
+			.videobox2{
+				left:475px;
 			}
-			#act{
+			.videotext1, .videotext2{
+				margin-top: 35px;
+				margin-left: 10px;
+				color: rgba(255,255,255,0.5);
+				font-family: PTC55F, sans-serif;
+			}
+			.videotext2{
+				margin-left: 140px;
+			}
+			.videopic1, .videopic2{
 				position: absolute;
-				margin:0px;
+				top: 4px;
+				margin-left: 290px;
+				border: 1px solid #353535;
+			}
+			.videopic2{
+				margin-left:0px;
+			}
+			#headerpartition{
+				opacity: 0.6;
+				position: absolute;
+				top: -5px;
+				margin-left: 433px;
+				height: 100px;
 			}
 			
-			.screenwrap{
-				background-color: rgba(0,0,0,0.5);
+			@font-face {
+    			font-family: PTC55F;
+    			src: url(PT-Sans/PTC55F.ttf);
+			}
+			.presenting{
+				position: relative;
+				background-color: rgba(0,0,0,0);
 				border: 1px solid black;
-        		margin: 0;
-        		width: 400px;
-        		height: 1100px;
-        		position: absolute;
-        		top: 0px;
-        		overflow-x: hidden;	
-        		overflow: hidden;
-        		z-index: 2;
-        		/* visibility:hidden;*/
-        		
-        		-webkit-transition-duration: 1s;
-  				-moz-transition-duration: 1s;
-    			-o-transition-duration: 1s;
-				transition-duration: 1s;
-    			-webkit-transition-property: -webkit-transform;
-    			-moz-transition-property: -moz-transform;
-    			-o-transition-property: -o-transform;
-    			transition-property: transform;
-        		
-        		-moz-animation-name: dropScreen;
-   				-moz-animation-iteration-count: 1;
-				-moz-animation-timing-function: ease-in-out;
-				-moz-animation-delay: 0.4s;
-    			-moz-animation-duration: 0.6s;
-
-    			-webkit-animation-name: dropScreen;
-    			-webkit-animation-iteration-count: 1;
-				-webkit-animation-timing-function: ease-in-out;
-				-webkit-animation-delay: 0.4s;
-    			-webkit-animation-duration: 0.6s;
-
-    			animation-name: dropScreen;
-   				animation-iteration-count: 1;
-    			animation-timing-function: ease-in-out;
-    			animation-delay: 0.4s;
-   				animation-duration: 0.6s;
-        	}
-        	.screen{
-        		margin: 0;
-        		width: 1000px;
-        		height: 1700px;
-        		background: rgba(255,0,0,0.3);
-        		overflow-x: hidden;	
-        		position:inherit;
-        		top:-300px;
-        		left:-750px;
-        		z-index: 2;
-        		-ms-transform: rotate(12deg); /* IE 9 */
-    			-webkit-transform: rotate(12deg); /* Chrome, Safari, Opera */
-    			transform: rotate(12deg);
-        	}
+				font-family: PTC55F, sans-serif;
+				width: 100%;
+				height: 25px;
+				z-index: 10;
+			}
+			.presentingwrapper{
+				position: absolute;
+				
+				width: 1300px;
+				height: inherit;
+				margin-left: auto;
+				margin-right: auto;
+				left: 0;
+				right: 0;
+				color:white;
+				text-align: center;
+				letter-spacing: 0.8em;
+			}
+			#vcetlogo{
+				position: absolute;
+				width:100px;
+				height:100px;
+				left:0px;
+				top:-40px;
+				display: inline-block;
+			}
+			#declare{
+				position: absolute;
+				margin-left: 120px;
+				margin-top: 3px;
+			}
         	
+			.testslider{
+				background: -moz-linear-gradient(left,  rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.07) 1%, rgba(0,0,0,0.41) 7%, rgba(0,0,0,0.7) 12%, rgba(0,0,0,0.7) 13%, rgba(0,0,0,0.7) 14%, rgba(0,0,0,0.7) 18%, rgba(0,0,0,0.7) 48%, rgba(0,0,0,0.7) 66%, rgba(0,0,0,0.7) 67%, rgba(0,0,0,0.7) 87%, rgba(0,0,0,0.5) 93%, rgba(0,0,0,0.5) 96%, rgba(0,0,0,0.5) 98%, rgba(0,0,0,0.5) 99%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.01)), color-stop(1%,rgba(0,0,0,0.07)), color-stop(7%,rgba(0,0,0,0.41)), color-stop(12%,rgba(0,0,0,0.7)), color-stop(13%,rgba(0,0,0,0.7)), color-stop(14%,rgba(0,0,0,0.7)), color-stop(18%,rgba(0,0,0,0.7)), color-stop(48%,rgba(0,0,0,0.7)), color-stop(66%,rgba(0,0,0,0.7)), color-stop(67%,rgba(0,0,0,0.7)), color-stop(87%,rgba(0,0,0,0.7)), color-stop(93%,rgba(0,0,0,0.5)), color-stop(96%,rgba(0,0,0,0.5)), color-stop(98%,rgba(0,0,0,0.5)), color-stop(99%,rgba(0,0,0,0.5)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  rgba(0,0,0,0.01) 0%,rgba(0,0,0,0.07) 1%,rgba(0,0,0,0.41) 7%,rgba(0,0,0,0.7) 12%,rgba(0,0,0,0.7) 13%,rgba(0,0,0,0.7) 14%,rgba(0,0,0,0.7) 18%,rgba(0,0,0,0.7) 48%,rgba(0,0,0,0.7) 66%,rgba(0,0,0,0.7) 67%,rgba(0,0,0,0.7) 87%,rgba(0,0,0,0.5) 93%,rgba(0,0,0,0.5) 96%,rgba(0,0,0,0.5) 98%,rgba(0,0,0,0.5) 99%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  rgba(0,0,0,0.01) 0%,rgba(0,0,0,0.07) 1%,rgba(0,0,0,0.41) 7%,rgba(0,0,0,0.7) 12%,rgba(0,0,0,0.7) 13%,rgba(0,0,0,0.7) 14%,rgba(0,0,0,0.7) 18%,rgba(0,0,0,0.7) 48%,rgba(0,0,0,0.7) 66%,rgba(0,0,0,0.7) 67%,rgba(0,0,0,0.7) 87%,rgba(0,0,0,0.5) 93%,rgba(0,0,0,0.5) 96%,rgba(0,0,0,0.5) 98%,rgba(0,0,0,0.5) 99%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  rgba(0,0,0,0.01) 0%,rgba(0,0,0,0.07) 1%,rgba(0,0,0,0.41) 7%,rgba(0,0,0,0.7) 12%,rgba(0,0,0,0.7) 13%,rgba(0,0,0,0.7) 14%,rgba(0,0,0,0.7) 18%,rgba(0,0,0,0.7) 48%,rgba(0,0,0,0.7) 66%,rgba(0,0,0,0.7) 67%,rgba(0,0,0,0.7) 87%,rgba(0,0,0,0.5) 93%,rgba(0,0,0,0.5) 96%,rgba(0,0,0,0.5) 98%,rgba(0,0,0,0.5) 99%,rgba(0,0,0,0) 100%); /* IE10+ */
+background: linear-gradient(to right,  rgba(0,0,0,0.01) 0%,rgba(0,0,0,0.07) 1%,rgba(0,0,0,0.41) 7%,rgba(0,0,0,0.7) 12%,rgba(0,0,0,0.7) 13%,rgba(0,0,0,0.7) 14%,rgba(0,0,0,0.7) 18%,rgba(0,0,0,0.7) 48%,rgba(0,0,0,0.7) 66%,rgba(0,0,0,0.7) 67%,rgba(0,0,0,0.7) 87%,rgba(0,0,0,0.5) 93%,rgba(0,0,0,0.5) 96%,rgba(0,0,0,0.5) 98%,rgba(0,0,0,0.5) 99%,rgba(0,0,0,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+
+				position: relative;
+				border: 1px solid black;
+				width: 100%;
+				height: 608px;
+				margin: 0;
+				
+			}
+			.blockwrapper{
+				position: absolute;
+				top:0px;
+				width: 1600px;
+				height: inherit;
+				margin-left: auto;
+				margin-right: auto;
+				left: -80px;
+				right: 0;
+				
+			}
+			.leftblock, .rightblock{
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 475px;
+				height: inherit;
+				background:red;
+			}
+			.rightblock{
+				left
+			}
+			
         	
         </style>
 
@@ -159,15 +250,30 @@
 	
 	<div class="wrapperBG">
 		<div class="wrapper">
-			<div class="header"></div>
-			<div class="testslider"></div>
-			<div class="screenwrap">
-				<div class="screen"></div>
+		
+			<div class="header">
+				<div id="headerbox">
+					<div class="videobox1"><p class="videotext1">WATCH THE ZEAL'14 AFTERMOVIE</p><a href="https://www.youtube.com/watch?v=v9eC6neFmXk" target="_self" class="inline-block litebox videopic1" data-litebox-group="group-2"><img src="images/eventTypes/octaves/imgs/promo.jpg"></img></a><img id="headerpartition" src="images/home/partition.png"></img></div>
+					<div class="videobox2"><a href="https://www.youtube.com/watch?v=hmQWKBFZM54" target="_self" class="inline-block litebox videopic2" data-litebox-group="group-2"><img src="images/eventTypes/octaves/imgs/aftermovie.jpg"></img></a><p class="videotext2">WATCH THE PROMO</p></div>
+				</div>
 			</div>
+			
+			<div class="presenting"><div class="presentingwrapper"><img id="vcetlogo" src="vcetlogo.png"></img> <p id="declare"> VIDYAVARDHINI'S COLLEGE OF ENGINEERING AND TECHNOLOGY</p></div></div>
+			
+			<div class="testslider">
+				<div class="blockwrapper">
+						<div class="leftblock"></div>
+						<div class="rightblock"></div>
+				</div>
+			
+			</div>
+			
 		</div>
 	</div>
 	
 	
+	
 	<div class="footer"><p><!--&copy Copyright Student's Council (Prateeksha Singh), 2015. All rights reserved.--></p></div>
+
     </body>
 </html>
