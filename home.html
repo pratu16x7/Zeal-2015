@@ -33,7 +33,7 @@ $(document).ready(function(){
  			   		width: 752, // default width of the slideshow
 					height: 508, // default height of the slideshow
 					speed: 'slow', // default animation transition speed
-					interval: 3000, // default interval between image change
+					interval: 4000, // default interval between image change
 					PlayPauseElement: false, // default css id for the play / pause element
 					PlayText: false, // default play text
 					PauseText: false, // default pause text
@@ -52,7 +52,26 @@ $(document).ready(function(){
         });
         
         
-	
+	$(".about").hover(function(){
+    	$("#aboutglow").fadeIn("fast");
+    		}, function(){
+    	$("#aboutglow").fadeOut("fast");
+	});
+	$(".events").hover(function(){
+    	$("#eventsglow").fadeIn("fast");
+    		}, function(){
+    	$("#eventsglow").fadeOut("fast");
+	});
+	$(".octaves").hover(function(){
+    	$("#octavesglow").fadeIn("fast");
+    		}, function(){
+    	$("#octavesglow").fadeOut("fast");
+	});
+	$(".contactus").hover(function(){
+    	$("#contactusglow").fadeIn("fast");
+    		}, function(){
+    	$("#contactusglow").fadeOut("fast");
+	});
 
 	$('.show').on('click', function() {
     	$('.redscreenwrap').addClass('slidescreen');
@@ -81,14 +100,20 @@ document.getElementById('redscreenwrap').style.visibility = "visible";
 }
 setTimeout(init,600);   
         </script>
-       
+        
+        
+
+    
 		
         <link href="assets/css/litebox.css" rel="stylesheet" type="text/css" media="all" />
         <link rel="stylesheet" type="text/css" href="simpleFadeSlideshow/demoStyleSheet.css" />
 
         
         <style>
-        	
+        	@font-face {
+    			font-family: PTC55F;
+    			src: url(PT-Sans/PTC55F.ttf);
+			}
         	
         	html, body, div, p {
 				margin: 0;
@@ -103,7 +128,7 @@ setTimeout(init,600);
 			}
 			body {
 				color:white;
-				font-family: Arial;
+				font-family: PTC55F, sans-serif;
 				font-size: 100%;
 				width: 100%;
 				background: rgb(0,0,0,0);
@@ -168,12 +193,12 @@ setTimeout(init,600);
 			}
 			.videotext1, .videotext2{
 				margin-top: 35px;
-				margin-left: 10px;
+				margin-left: -200px;
 				color: rgba(255,255,255,0.5);
 				font-family: PTC55F, sans-serif;
 			}
 			.videotext2{
-				margin-left: 140px;
+				margin-left: 70px;
 			}
 			.videopic1, .videopic2{
 				position: absolute;
@@ -182,7 +207,7 @@ setTimeout(init,600);
 				border: 1px solid #353535;
 			}
 			.videopic2{
-				margin-left:0px;
+				margin-left:20px;
 			}
 			#headerpartition{
 				opacity: 0.6;
@@ -192,10 +217,9 @@ setTimeout(init,600);
 				height: 100px;
 			}
 			
-			@font-face {
-    			font-family: PTC55F;
-    			src: url(PT-Sans/PTC55F.ttf);
-			}
+			
+			
+			
 			.presenting{
 				position: relative;
 				background-color: rgba(0,0,0,0);
@@ -259,14 +283,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03000000', e
 				right: 0;
 				
 			}
-			.leftblock, .rightblock{
+			.leftblockwrap, .rightblockwrap{
 				position: absolute;
 				top: 0px;
 				left: 0px;
 				width: 1100px;
 				height: inherit;
 			}
-			.rightblock{
+			.rightblockwrap{
 				border: 1px solid black;
 				left: 1100px;
 				width: 500px;
@@ -279,21 +303,140 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03000000', e
 				z-index: 15;
 			}
 			
-			.test{
-				position: absolute;
-				
+			.rightblock1, .rightblock2, .rightblock3, .rightblock4, .rightblock5{
+				position: relative;
+				width: 400px;
+				display: block;
+				/*background: rgba(0,0,0,0.8);
+				border: 1px solid gray;*/
 			}
 			
-			.logo {
-width: 300px;
-height: 100px;
-background: url('http://placehold.it/300x100/ffffff/000000.png&text=first') no-repeat center top;
-    transition: 0.5s;
-    -moz-transition: 0.5s;
-}
-.logo:hover {
-background-image: url('http://placehold.it/300x100/ffffff/000000.png&text=second');
-}
+			.rightblock1{
+				height: 58px;
+				margin-top: 25px;
+				font-family: UNDECAPPEDvinyl, sans-serif;
+				font-size: 2em;
+				color: #ffffbd;
+			}
+			.rightblock1 p{
+				margin-top: 10px;
+			}
+			
+			.rightblock2{
+				height: 108px;
+			}
+			
+			.rightblock3{
+				height: 158px;
+				background: rgba(0,0,0,0.4);
+				border-radius: 13px 0px 13px 0px;
+			}
+			.rightblock3 h3{
+				text-align: center;
+				font-size: 1.2em;
+				color: #ffffbd;
+				margin-top: 10px;
+			}
+			.rightblock3 p{
+				margin-top: 20px;
+			}
+			
+			.rightblock4{
+				height: 64px;
+				overflow: hidden;
+			}
+			
+			.rightblock5{
+				position: relative;
+				height: 215px;
+			}
+			
+			@font-face {
+    			font-family: UNDECAPPEDvinyl;
+    			src: url(UNDECAPPEDvinyl.ttf);
+			}
+			
+			@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
+			.days_ref, .hours_ref, .minutes_ref, .seconds_ref {
+                color: white;
+                font: normal 12px 'Open Sans', sans-serif;
+                margin-top: 0px;
+            }
+
+            ul.countdown {
+            	color: white;
+                font: normal 12px 'Open Sans', sans-serif;
+                list-style: none;
+                margin-top: -5px;
+                padding: 0;
+                display: block;
+                text-align: center;
+            }
+
+            ul.countdown li {
+                display: inline-block;
+            }
+
+            ul.countdown li span {
+                font-size: 60px;
+                font-weight: 300;
+                line-height: 80px;
+            }
+
+            ul.countdown li.seperator {
+                font-size: 60px;
+                line-height: 70px;
+                vertical-align: top;
+            }
+
+            ul.countdown li p {
+                color: #a7abb1;
+                font-size: 14px;
+            }
+            .social{
+            	width: 50px;
+            	height: 50px;
+            	margin: 0px 15px;
+            	
+            	margin-top: 10px;
+            }
+            
+            .about, .events, .octaves, .contactus{
+            	position: absolute;
+            		
+            }
+            #about, #events, #octaves, #contactus{
+            	position: absolute;
+            	margin: 0;
+            }
+            #aboutglow, #eventsglow, #octavesglow, #contactusglow{
+            	position: absolute;
+            	margin: 0;
+            	display: none;
+            }
+            .about{
+            	margin-top: 0px;
+            	margin-left: 70px;
+            }
+            .events{
+            	margin-top: 45px;
+            	margin-left: 200px;
+            }
+            .octaves{
+            	margin-top: 65px;
+            	margin-left: 20px;
+            }
+            .contactus{
+            	margin-top: 120px;
+            	margin-left: 120px;
+            }
+            #slideshowWrapper{
+            	position: absolute;
+            	margin-top: 20px;
+            	margin-left: 300px;
+            }
+            
+			
 			
         	
         </style>
@@ -320,10 +463,12 @@ background-image: url('http://placehold.it/300x100/ffffff/000000.png&text=second
 			
 			<div class="testslider">
 				<div class="blockwrapper">
-						<div class="leftblock">
+						<div class="leftblockwrap">
 							<img class="leftboximg" src="images/home/ZealYouthopia.png"></img>
 							<div id="slideshowWrapper" >
     							<ul id="slideshow">
+    								<li><img src="images/6.jpg" width="752" height="508" border="0" alt="" /></li>
+    								<li><img src="images/5.jpg" width="752" height="508" border="0" alt="" /></li>
        								<li><img src="images/4.jpg" width="752" height="508" border="0" alt="" /></li> <!-- This is the last image in the slideshow -->
         							<li><img src="images/3.jpg" width="752" height="508" border="0" alt="" /></li>
        								<li><img src="images/2.jpg" width="752" height="508" border="0" alt="" /></li>
@@ -331,7 +476,47 @@ background-image: url('http://placehold.it/300x100/ffffff/000000.png&text=second
     							</ul><br clear="all" />
 							</div>
 						</div>
-						<div class="rightblock"><div class="logo"></div></div>
+						
+						
+						<div class="rightblockwrap">
+							<div class="rightblock1"><p>12th - 13th March</p></div>
+							<div class="rightblock2" >
+								<ul class="countdown">
+        <li>
+            <span class="days">00</span>
+            <p class="days_ref">days</p>
+        </li>
+        <li class="seperator">.</li>
+        <li>
+            <span class="hours">00</span>
+            <p class="hours_ref">hours</p>
+        </li>
+        <li class="seperator">:</li>
+        <li>
+            <span class="minutes">00</span>
+            <p class="minutes_ref">minutes</p>
+        </li>
+        <li class="seperator">:</li>
+        <li>
+            <span class="seconds">00</span>
+            <p class="seconds_ref">seconds</p>
+        </li>
+    </ul>
+							</div>
+							<div class="rightblock3">
+								<h3>UPDATES</h3>
+								<p>ZEAL, for the academic year 2014-15, has been scheduled to kick-start in March, 2015 with an ambiguous and gratifying theme <em>Youthopia</em>.</p>
+							</div>
+							<div class="rightblock4"><p><a href=""><img class="social" src="fb.png"></img></a> <a href=""><img class="social" src="youtube.png"></img> <a href=""><img class="social" src="insta.png"></img></a></p></div>
+							
+							<div class="rightblock5">
+							<div class="about"><img id="aboutglow" src="images/home/menu/aboutglow.png"></img><a href=""><img id="about" src="images/home/menu/about.png"></img></a></div>
+							<div class="events"><img id="eventsglow" src="images/home/menu/eventsglow.png"></img><a href=""><img id="events" src="images/home/menu/events.png"></img></a></div>
+							<div class="octaves"><img id="octavesglow" src="images/home/menu/octavesglow.png"></img><a href=""><img id="octaves" src="images/home/menu/octaves.png"></img></a></div>
+							<div class="contactus"><img id="contactusglow" src="images/home/menu/contactusglow.png"></img><a href=""><img id="contactus" src="images/home/menu/contactus.png"></img></a></div>
+							</div>
+							
+						</div>
 				</div>
 			
 			</div>
@@ -341,7 +526,18 @@ background-image: url('http://placehold.it/300x100/ffffff/000000.png&text=second
 	
 	
 	
-	<div class="footer"><p><!--&copy Copyright Student's Council (Prateeksha Singh), 2015. All rights reserved.--></p></div>
+	<div class="footer"><p>&copy Copyright Students' Council - Prateeksha Singh, 2015. All rights reserved.</p></div>
 
     </body>
+    
+    <script type="text/javascript" src="jquery.downCount.js"></script>
+
+    <script  type="text/javascript">
+        $('.countdown').downCount({
+            date: '03/12/2015 12:00:00',
+            offset: +5.30
+        }, function () {
+            alert('WOOT WOOT, done!');
+        });
+    </script>
 </html>
