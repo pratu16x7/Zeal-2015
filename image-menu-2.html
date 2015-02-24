@@ -109,26 +109,30 @@ $().ready(function() {
 <![endif]-->
 <script type="text/javascript">
 $().ready(function() {
-	$('.jimgMenu ul').kwicks({max: 1050, duration: 500, easing: 'easeOut'});
+	$('.jimgMenu ul').kwicks({max: 960, duration: 500, easing: 'easeOut'});
 	var name;
 	$('#nav > li').click(function(){
 					
 					if(name != this.className){
 						var $this = $(this);
 						name = this.className;
-					$('#icons').animate({marginLeft:100}, 600,function(){
+					$('#icons').animate({marginLeft:-400}, 400,function(){
 						var $this = $(this);
 						
 						$('#icons div').hide();							
 						$('#'+name.split(" ")[0]).show();								//works now :D, name was "dance active"
 						
-						$this.animate({marginLeft:500}, 600); 
+						$this.animate({marginLeft:100}, 500); 
 					})	
 					
 					}	 
 				});
-	
-	});
+				
+		
+	$("description").click(function(){
+    $("container").toggle();
+	});	
+});
 	
 </script>
 </head>
@@ -140,33 +144,28 @@ $().ready(function() {
 <div class="jimgMenu">
 
   <ul id="nav">
-    <li class="vocals"><div class="sect"><div class="sectcontainer">Vocals </div></div></li>
-    <li class="dance"><div class="sect"><div class="sectcontainer">Dance<button class="btn btn-1 btn-1a">Group Dance</button><button class="btn btn-1 btn-1a">Group Dance</button><button class="btn btn-1 btn-1a">Group Dance</button><button class="btn btn-1 btn-1a">Group Dance</button></div></div></li>
+    <li class="dance"><div class="sect"><div class="sectcontainer">Dance </div></div></li>
+    <li class="music"><div class="sect"><div class="sectcontainer">Music<button class="btn btn-1 btn-1a">Group Dance</button><button class="btn btn-1 btn-1a">Group Dance</button><button class="btn btn-1 btn-1a">Group Dance</button><button class="btn btn-1 btn-1a">Group Dance</button></div></div></li>
     <li class="act"><div class="sect"><div class="sectcontainer">Act</div></div></li>
     
   </ul>
 </div>
 
 <div id="icons">
-<div id="vocals" style="display:none;">
+<div id="dance" style="display:none;">
 <img src="images/block1.png"></img>
 </div>
 
-<div id="dance" style="display:none;">
-<img src="images/block2.jpg"></img>
+<div id="music" style="display:none;">
+<img src="images/block2.png"></img>
 </div>
 
 <div id="act" style="display:none;">
-<img src="images/block3.jpg"></img>
+<img src="images/block3.png"></img>
 </div>
 </div>
 
 </div>
 
-<br  style="clear:both"/><br />
-<div class="description">
-<p>A dynamic Menu allowing you to easily navigate any content visually, with a Mootools like effect through the power of Jquery javascript.</p>			
-</div>
-<hr style="width:92%;text-align:center;height:1px;border:1px;color:#e2e2e2;background-color:#e2e2e2;" />
 </body>
 </html>

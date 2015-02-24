@@ -1,26 +1,23 @@
-.container{
-    position: relative;
-    margin: 0px 0px 0px 50px;
-    height: 768px;
-    overflow-x: hidden;
-}
+
 
 #icons{
 	position: absolute;
-	margin:120px auto 0px 400px;
+	margin:140px auto 0px 400px;
+	z-index: 5;
 }
 
-#vocals{
+#dance{
 	position: absolute;
 	margin:0px;
 }
-#dance{
+#music{
 	position: absolute;
 	margin:0px;
 }
 #act{
 	position: absolute;
 	margin:0px;
+	margin-left: 40px;
 }
 
 
@@ -28,9 +25,10 @@
 	position:absolute;
 	margin: 0px 0px 0px 0px;
 	padding: 0px;
-	width:1200px;
-	height:700px;
+	width:1083px;
+	height:608px;
 	overflow: hidden;
+	z-index: 4;
 }
 
 .jimgMenu ul {
@@ -42,12 +40,12 @@
 	margin: 0px;
 	padding: 0px;
 	display: block;
-	height: 700px;
+	height: 608px;
 	position: relative;
 	}
 	
 .jimgMenu ul li {
-	width: 400px;
+	width: 361px;
 	float: left;
 	display: block;
 	overflow: hidden;
@@ -60,15 +58,15 @@
 	cursor:pointer;
 	display:block;
 	overflow: hidden;
-	height: 700px;
+	height: 608px;
 }
 
-.jimgMenu ul li.vocals div.sect {
+.jimgMenu ul li.dance div.sect {
 	background: rgba(255,0,0,0.3);
   
 }
 
-.jimgMenu ul li.dance  div.sect{
+.jimgMenu ul li.music  div.sect{
 	background: rgba(0,255,0,0.25) ;
 
 }
@@ -94,8 +92,8 @@
 
 .sectcontainer{
 	position: absolute;
-	width: 940px;
-	height: 600px;
-	margin: 50px;
+	width: 900px;
+	height: 530px;
+	margin: 30px;
 	border: 2px ridge white;
 }
